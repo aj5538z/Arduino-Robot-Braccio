@@ -13,7 +13,7 @@ This repository is for the foundation year robotic arm project.
 [View Manual Code](https://github.com/aj5538z/Arduino-Robot-Braccio/blob/master/Code/manual_code/code_manual.ino)
 
 ## Automatic Code
-[View Automatic Code](https://github.com/aj5538z/Arduino-Robot-Braccio/blob/master/Code/final_code/final_code.ino)
+[View Automatic Code](https://github.com/aj5538z/Arduino-Robot-Braccio/blob/master/Code/automatic_code/automatic_code.ino)
 
 ## Author
 aj5538z
