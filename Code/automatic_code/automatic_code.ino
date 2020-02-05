@@ -101,7 +101,7 @@ void loop()
  
   Serial.println("3");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  120, 110,  162,  137, 90,  30);
+  RoboticArmMovement(20,  120, 110,  162,  133, 90,  30);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
@@ -111,7 +111,7 @@ void loop()
   
    Serial.println("4");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  120, 110,  162,  137, 90,  57);
+  RoboticArmMovement(20,  120, 110,  162,  133, 90,  57);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
@@ -141,7 +141,7 @@ void loop()
 
   Serial.println("7");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  172, 140,  150,  85,  90,  57);
+  RoboticArmMovement(20,  172, 140,  150,  82,  90,  57);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
@@ -223,7 +223,7 @@ void loop()
 
   Serial.println("15");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  151,  123,  135,  155, 90,  57);
+  RoboticArmMovement(20,  151,  123,  135,  152, 90,  57);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
@@ -232,7 +232,7 @@ void loop()
  ****************************************************************************************************************************/
    Serial.println("16");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  151,  123,   135,  155, 90,  30);
+  RoboticArmMovement(20,  151,  123,   135,  152, 90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
@@ -262,7 +262,7 @@ void loop()
  
     Serial.println("19");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  180,  102,  155,  160, 90,  30);
+  RoboticArmMovement(20,  180,  104,  155,  161, 90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
@@ -272,7 +272,7 @@ void loop()
 
     Serial.println("20");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  180,  102,  155,  160, 90,  52);
+  RoboticArmMovement(20,  180,  104,  155,  161, 90,  50);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
@@ -282,17 +282,17 @@ void loop()
  
  Serial.println("21");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  180,  82,   82,   82,  90,  52);
+  RoboticArmMovement(20,  180,  85,   150,  93,  90,  50);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
   
     /*****************************************************************************************************************************
- STands up straight
+ Stands up straight
  ****************************************************************************************************************************/
 
   Serial.println("22");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  100, 82,   82,  82,  90,  52);
+  RoboticArmMovement(20,  100, 85,   150,  93,  90,  50);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
@@ -302,7 +302,7 @@ void loop()
  
    Serial.println("23");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  100,  85,   170,  93,  90,  52);
+  RoboticArmMovement(20,  100,  85,   170,  93,  90,  50);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
