@@ -20,4 +20,4 @@ aj5538z
 
 Creation Date: 25/01/2020
 
-Version: 1.0.0.6
+Version: 1.0.0.7
