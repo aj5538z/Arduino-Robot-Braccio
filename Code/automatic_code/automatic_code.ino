@@ -79,19 +79,19 @@ void loop()
     WR = wrist rotation degrees. Allowed values from 0 to 180 degrees
     GR = gripper degrees. Allowed values from 10 to 73 degrees. 10: the toungue is open, 73: the gripper is closed.
   ******************************************************************************************************************/
-  Serial.println("First Movement");
+  Serial.println("1");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  10);
+  RoboticArmMovement(20,  120,  82,   82,   82,  90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
   /*****************************************************************************************************************************
-  Moves base to first position and stands up straight
+  Moves base to position 1 and stands up straight
  ****************************************************************************************************************************/
  
- Serial.println("Second Movement");
+ Serial.println("2");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  13);
+  RoboticArmMovement(20,  120,  82,   82,   82,  82,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
   
@@ -99,150 +99,150 @@ void loop()
   Opens the claw
  ****************************************************************************************************************************/
  
-  Serial.println("Third Movement");
+  Serial.println("3");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,   155,  110,  147,  90,  10);
+  RoboticArmMovement(20,  120, 110,  162,  137, 90,  30);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
    /*****************************************************************************************************************************
-  Goes down to cup one
+  Goes down to G1
+ ****************************************************************************************************************************/
+  
+   Serial.println("4");
+                  //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
+  RoboticArmMovement(20,  120, 110,  162,  137, 90,  57);
+  // Wait 1 second recommended for power to discharge from the servos
+  delay(1000);
+  
+   /*****************************************************************************************************************************
+  Closes the claw
  ****************************************************************************************************************************/
  
-    Serial.println("Fourth Movement");
+    Serial.println("5");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  155,   110,   147,  90,  57);
+  RoboticArmMovement(20,  120,   82,   82,   82,  90,  57);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
   /*****************************************************************************************************************************
- Picks up the ball from cup one
+ Picks up the ball and stands up straight
+ ****************************************************************************************************************************/
+ 
+ Serial.println("6");
+                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
+  RoboticArmMovement(20,  172,  82,   82,   82,  90,  57);
+  //Wait 1 second recommended for power to discharge from the servos 
+  delay(1000);
+  
+    /*****************************************************************************************************************************
+ Moves base to R1
  ****************************************************************************************************************************/
 
-    Serial.println("Fifth Movement");
+  Serial.println("7");
+                  //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
+  RoboticArmMovement(20,  172, 140,  150,  85,  90,  57);
+  // Wait 1 second recommended for power to discharge from the servos
+  delay(1000);
+  
+    /*****************************************************************************************************************************
+ Places the ball into R1
+ ****************************************************************************************************************************/
+ 
+   Serial.println("8");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  90,   90,   90,  90,  57);
+  RoboticArmMovement(20,  172,  140,  150,  85,  90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
-   /*****************************************************************************************************************************
+  /*****************************************************************************************************************************
+  Lets go of ball
+ ****************************************************************************************************************************/
+
+  
+ Serial.println("9");
+                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
+  RoboticArmMovement(20,  172,  82,   82,   82,  90,  30);
+  //Wait 1 second recommended for power to discharge from the servos 
+  delay(1000);
+  
+    /*****************************************************************************************************************************
  Stands up straight
  ****************************************************************************************************************************/
- 
- Serial.println("Sixth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  125,   150,   148,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-  
-    /*****************************************************************************************************************************
- Moves to cup two
- ****************************************************************************************************************************/
 
-  Serial.println("Seventh Movement");
+  Serial.println("10");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,   125,  150,  148,  90,  10);
+  RoboticArmMovement(20,  130, 82,   82,   82,  90,  30);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
     /*****************************************************************************************************************************
- Places the ball into cup two
- ****************************************************************************************************************************/
- 
-   Serial.println("Eighth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  90,   90,   90,  90,  10);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
-  /*****************************************************************************************************************************
-  Stands up straight
+ Moves to G2
  ****************************************************************************************************************************/
 
-  
- Serial.println("Ninth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  125,   150,   148,  90,  10);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-  
-    /*****************************************************************************************************************************
- Moves to cup three
- ****************************************************************************************************************************/
-
-  Serial.println("Tenth Movement");
+  Serial.println("11");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,   125,  150,  148,  90,  57);
-  // Wait 1 second recommended for power to discharge from the servos
-  delay(1000);
-  
-    /*****************************************************************************************************************************
- Picks up ball from cup three
- ****************************************************************************************************************************/
-
-  Serial.println("Tenth Movement");
-                  //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,   90,  90,  90,  90,  57);
+  RoboticArmMovement(20,  130, 133,  130,  138,  90, 30);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
 
  /*****************************************************************************************************************************
- Stands up straight
+ Goes down to G2
  ****************************************************************************************************************************/
   
-  Serial.println("Eleventh Movement");
+  Serial.println("12");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  90,   90,   90,  90,  57);
+  RoboticArmMovement(20,  130,  133,  130,  138, 90,  57);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000); 
   
   /*****************************************************************************************************************************
- Moves to cup four
+ Closes claw
  ****************************************************************************************************************************/
 
-  Serial.println("Twelth Movement");
+  Serial.println("13");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  57);
+  RoboticArmMovement(20,  130,  82,   82,   82,  90,  57);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
  /*****************************************************************************************************************************
- Places ball into cup four
- ****************************************************************************************************************************/
-  
-  
-  Serial.println("Thirteenth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  155,   110,   147,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
-  /*****************************************************************************************************************************
  Stands up straight
  ****************************************************************************************************************************/
-
-  Serial.println("Fourteenth Movement");
+  
+  
+  Serial.println("14");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  155,   110,   147,  90,  10);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
- /*****************************************************************************************************************************
- Moves base to cup five (blue ball)
- ****************************************************************************************************************************/
-   Serial.println("Fifteenth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  10);
+  RoboticArmMovement(20,  151,   82,   82,   82,  90,  57);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
   /*****************************************************************************************************************************
-  Picks up the ball from cup five
+ Moves base to R2
+ ****************************************************************************************************************************/
+
+  Serial.println("15");
+                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
+  RoboticArmMovement(20,  151,  123,  135,  155, 90,  57);
+  //Wait 1 second recommended for power to discharge from the servos 
+  delay(1000);
+
+ /*****************************************************************************************************************************
+ Moves to R2
+ ****************************************************************************************************************************/
+   Serial.println("16");
+                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
+  RoboticArmMovement(20,  151,  123,   135,  155, 90,  30);
+  //Wait 1 second recommended for power to discharge from the servos 
+  delay(1000);
+
+  /*****************************************************************************************************************************
+  Lets go of ball
  ****************************************************************************************************************************/
  
- Serial.println("Sixteenth Movement");
+ Serial.println("17");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  13);
+  RoboticArmMovement(20,  151,  82,   82,   82,  82,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
   
@@ -250,205 +250,75 @@ void loop()
   Stands up straight 
  ****************************************************************************************************************************/
  
-  Serial.println("Seventeenth Movement");
+  Serial.println("18");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,   155,  110,  147,  90,  10);
+  RoboticArmMovement(20,  180, 82,   82,   82,  90,  30);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
    /*****************************************************************************************************************************
-  Moves to cup six
+  Moves base to G3
  ****************************************************************************************************************************/
  
-    Serial.println("Eighteenth Movement");
+    Serial.println("19");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  155,   110,   147,  90,  57);
+  RoboticArmMovement(20,  180,  102,  155,  160, 90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
   /*****************************************************************************************************************************
- Places the ball in cup six 
+ MOves down to G3 
  ****************************************************************************************************************************/
 
-    Serial.println("Nineteenth Movement");
+    Serial.println("20");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  90,   90,   90,  90,  57);
+  RoboticArmMovement(20,  180,  102,  155,  160, 90,  52);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
    /*****************************************************************************************************************************
- Stands upright
+ Closes Claw
  ****************************************************************************************************************************/
  
- Serial.println("Twentieth Movement");
+ Serial.println("21");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  125,   150,   148,  90,  57);
+  RoboticArmMovement(20,  180,  82,   82,   82,  90,  52);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
   
     /*****************************************************************************************************************************
- Goes back down and picks up ball again 
+ STands up straight
  ****************************************************************************************************************************/
 
-  Serial.println("Twenty First Movement");
+  Serial.println("22");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,   125,  150,  148,  90,  10);
+  RoboticArmMovement(20,  100, 82,   82,  82,  90,  52);
   // Wait 1 second recommended for power to discharge from the servos
   delay(1000);
   
     /*****************************************************************************************************************************
- stands up straight
+ Moves base to R3
  ****************************************************************************************************************************/
  
-   Serial.println("Twenty Second Movement");
+   Serial.println("23");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  90,   90,   90,  90,  10);
+  RoboticArmMovement(20,  100,  85,   170,  93,  90,  52);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
 
   /*****************************************************************************************************************************
-  moves to cup 5 
+  moves down to R3
  ****************************************************************************************************************************/
 
   
- Serial.println("Twenty Third Movement");
+ Serial.println("24");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  125,   150,   148,  90,  10);
+  RoboticArmMovement(20,  100,  85,   170,  93,  90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
   delay(1000);
   
     /*****************************************************************************************************************************
- PLaces ball in Cup 5
- ****************************************************************************************************************************/
-
-  Serial.println("Twenty Fourth Movement");
-                  //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,   125,  150,  148,  90,  57);
-  // Wait 1 second recommended for power to discharge from the servos
-  delay(1000);
-  
-    /*****************************************************************************************************************************
- Stands up straight
- ****************************************************************************************************************************/
-
-  Serial.println("Twenty Fifth Movement");
-                  //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,   90,  90,  90,  90,  57);
-  // Wait 1 second recommended for power to discharge from the servos
-  delay(1000);
-
- /*****************************************************************************************************************************
- Moves to cup 4
- ****************************************************************************************************************************/
-  
-  Serial.println("Twenty Sixth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  90,   90,   90,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000); 
-  
-  /*****************************************************************************************************************************
- Picks up ball from Cup 4
- ****************************************************************************************************************************/
-
-  Serial.println("Twenty Seventh Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
- /*****************************************************************************************************************************
- Stands up straight
- ****************************************************************************************************************************/
-  
-  
-  Serial.println("Twenty Eighth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  155,   110,   147,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
-  /*****************************************************************************************************************************
- Moves to Cup 3
- ****************************************************************************************************************************/
-
-  Serial.println("Twenty NInth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  155,   110,   147,  90,  10);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
- /*****************************************************************************************************************************
- PLaces ball in Cup 3
- ****************************************************************************************************************************/
-   Serial.println("Thirtieth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  10);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
-  /*****************************************************************************************************************************
-  STands up Straight
- ****************************************************************************************************************************/
- 
- Serial.println("Thirty First Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  90,   90,   90,  90,  13);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-  
-  /*****************************************************************************************************************************
-  Moves to Cup 2 
- ****************************************************************************************************************************/
- 
-  Serial.println("Thirty Second Movement");
-                  //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,   155,  110,  147,  90,  10);
-  // Wait 1 second recommended for power to discharge from the servos
-  delay(1000);
-  
-   /*****************************************************************************************************************************
-  Picks up ball from Cup 2
- ****************************************************************************************************************************/
- 
-    Serial.println("thirty Third Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  165,  155,   110,   147,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
-  /*****************************************************************************************************************************
- Stands up straight
- ****************************************************************************************************************************/
-
-    Serial.println("Thirty Fourth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  90,   90,   90,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-
-   /*****************************************************************************************************************************
- MOves to Cup 1
- ****************************************************************************************************************************/
- 
- Serial.println("THirty Fifth Movement");
-                  //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,  125,   150,   148,  90,  57);
-  //Wait 1 second recommended for power to discharge from the servos 
-  delay(1000);
-  
-    /*****************************************************************************************************************************
- Places ball in Cup 1
- ****************************************************************************************************************************/
-
-  Serial.println("THirty Sixth Movement");
-                  //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
-  RoboticArmMovement(20,  119,   125,  150,  148,  90,  10);
-  // Wait 1 second recommended for power to discharge from the servos
-  delay(1000);
-  
-    /*****************************************************************************************************************************
- Stands up straight
+ Lets go of ball
  ****************************************************************************************************************************/
  
 }
