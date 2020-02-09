@@ -541,7 +541,7 @@ void loop()
  Moves base to G3
  ****************************************************************************************************************************/
 
-  Serial.println("46");
+  Serial.println("47");
                   //(SD,  BA,  SH,   EL,   WV,  WR,  GR);
   RoboticArmMovement(20,  180, 85,   150,  159,  90,  50);
   // Wait 1 second recommended for power to discharge from the servos
@@ -551,7 +551,7 @@ void loop()
  Moves vertical down
  ****************************************************************************************************************************/
 
-    Serial.println("47");
+    Serial.println("48");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
   RoboticArmMovement(20,  180,  104,  155,  159, 90,  50);
   //Wait 1 second recommended for power to discharge from the servos 
@@ -561,7 +561,7 @@ void loop()
  Moves down to G3
  ****************************************************************************************************************************/
 
-    Serial.println("48");
+    Serial.println("49");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
   RoboticArmMovement(20,  180,  104,  155,  159, 90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
@@ -571,7 +571,7 @@ void loop()
  Lets go of the ball
  ****************************************************************************************************************************/
 
-    Serial.println("49");
+    Serial.println("50");
                   //(SD,  BA,   SH,   EL,   WV,  WR,  GR);
   RoboticArmMovement(20,  180,  82,  82,  82, 90,  30);
   //Wait 1 second recommended for power to discharge from the servos 
